@@ -1,0 +1,182 @@
+
+
+:root {
+    --primary-color: #f39e00;
+}
+
+body {
+    margin: 0;
+    background: black;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
+}
+a {
+    text-decoration: none;
+}
+ul {
+    list-style-type: none;
+}
+nav {
+    img{
+        margin: 1em;
+        width: 10em;
+    }
+    background: #363636;
+    height: 80px;
+    width: 100%;
+    ul {
+        float: right;
+        margin-right: 2em;
+        li{
+            display: inline-block;
+            line-height: 2em;
+            margin-right: 1em;
+            margin-top: 0em;
+            padding: 0.5em;
+            a {
+                color: white;
+                &.current {
+                    font-weight: bold;
+                    color: var(--primary-color);
+                }
+                &:hover{
+                    background:#4e4e4e;
+                    transition: 0.5s;
+                }
+            }
+        }
+    }
+
+}
+h1 {
+    text-align: center;
+    font-size: 5em;
+    span{
+        font-style: italic;
+        color: var(--primary-color);
+    }
+}
+
+.hero {
+    margin-top: 5em;
+    .hero-content{
+        text-align: center;
+    }
+    img {
+        width: 20em;
+        margin: 1em;
+    }
+    iframe {
+        padding-bottom: 5em;
+        max-width: 600px;
+        width: 90%;
+    }
+    .multikino {
+        vertical-align: top;
+        width: 30em;
+    
+    }
+    .reviews-screens {
+        img {
+            width: 40em;
+        }
+    }
+}
+
+.check-btn {
+    float: right;
+    cursor: pointer;
+    display: none;
+    img{
+        width: 2em;
+    }
+}
+.home-section {
+    margin: 0 auto;
+    margin-bottom: 2em;
+    width: 50%;
+    text-align: center;
+    border: 0.3em solid var(--primary-color);
+    border-radius: 1em;
+    font-size: 1.5em;
+    
+}
+
+.cast-list {
+    margin: 0 auto;
+    margin-top: 2em;
+    width: 40%;
+    overflow: hidden; // Żeby border brał pod uwagę img
+    border: 0.3em solid var(--primary-color);
+    border-radius: 1em;
+    font-size: 1.5em;
+    img {
+        float: left;
+        width: 200px;
+        margin: 1em 1em 1em 0em;
+    }
+    span {
+        color: var(--primary-color);
+        font-size: 2em;
+        font-weight: bold;
+    }
+    p {
+        margin: 1em;
+    }
+}
+
+.quotes{
+    li{
+        margin: 0 auto;
+        margin-top: 2em;
+        margin-bottom: 2em;
+        width: 40%;
+        overflow: hidden; // Żeby border brał pod uwagę cite
+        border: 0.3em solid var(--primary-color);
+        border-radius: 1em;
+        font-size: 1.5em;
+        cite {
+            float: right;
+            padding: 1em;
+        }
+    }
+
+}
+@media only screen and (min-width: 801px) {
+    #check {
+        display: none;
+    }
+}
+@media only screen and (max-width: 800px) {
+    #check {
+        opacity: 0;
+    }
+    .check-btn {
+        display: block;
+    }
+    .nav-list {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: rgb(0, 0, 46);
+        opacity: 90%;
+        text-align: center;
+    }
+    nav {
+        #burger {
+            margin: 1.7em;
+        }
+        #home-logo {
+            margin-top: -0.3em;
+        }
+        ul{
+            li{
+                display: block;
+            }
+        }
+    }
+    #check:checked ~ .navbar ul {
+        display: none;
+    }
+    
+}
